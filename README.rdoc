@@ -1,0 +1,15 @@
+== README
+
+* rake secret
+* rails g devise:install
+* Inside the devise.rb file uncomment config.secret_key and set it to the generated secret
+* On top of ApplicationController, insert `include Pundit`
+* rails g pundit:install
+* rails generate friendly_id
+* rake db:migrate
+* rails generate amistad:install
+* rake db:migrate
+* rails generate acts_as_votable:migration
+* rake db:migrate
+* rails generate acts_as_follower
+* rake db:migrate
