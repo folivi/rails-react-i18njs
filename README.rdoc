@@ -14,3 +14,9 @@
 * rails generate acts_as_follower
 * rake db:migrate
 * rails generate rspec:install
+* rails g bower_rails:initialize
+
+* Add this to the gemfile:
+  source 'https://rails-assets.org' do
+     gem 'rails-assets-BOWER_PACKAGE_NAME'
+  end

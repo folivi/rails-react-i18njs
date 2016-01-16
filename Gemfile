@@ -28,7 +28,7 @@ end
 gem 'friendly_id', '~> 5.0.4'
 gem 'goldiloader'
 #assets
-gem 'bower-rails', '~> 0.9.2'
+gem "bower-rails", "~> 0.10.0"
 gem 'react-rails', '~> 1.0'
 
 group :development do
@@ -95,3 +95,7 @@ gem 'prawn-table'
 gem 'puma'
 
 gem 'autoprefixer-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
