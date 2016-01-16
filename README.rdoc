@@ -13,3 +13,4 @@
 * rake db:migrate
 * rails generate acts_as_follower
 * rake db:migrate
+* rails generate rspec:install
