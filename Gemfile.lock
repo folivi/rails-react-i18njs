@@ -347,7 +347,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   rails-assets-bootstrap!
   rails-i18n
-  react-rails (~> 1.0)
+  react-rails (~> 1.5.0)
   rmagick
   roadie
   roadie-rails

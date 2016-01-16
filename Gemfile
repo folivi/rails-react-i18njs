@@ -27,9 +27,10 @@ end
 #active-record
 gem 'friendly_id', '~> 5.0.4'
 gem 'goldiloader'
+
 #assets
 gem "bower-rails", "~> 0.10.0"
-gem 'react-rails', '~> 1.0'
+gem 'react-rails', '~> 1.5.0'
 
 group :development do
   gem 'quiet_assets'
