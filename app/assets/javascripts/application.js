@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require i18n
+//= require i18n/translations
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
@@ -17,3 +19,6 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+
+I18n.defaultLocale = "fr";
+I18n.fallbacks = false;

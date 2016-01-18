@@ -5,7 +5,19 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+include React::ServerRendering
+module React
+  module ServerRendering
+    class I18nJsRenderer < SprocketsRenderer
 
+      def before_render(component_name, props, prerender_options)
+        puts 'loader'
+        super + "I18n.defaultLocale = '#{Apptemplate::Application.config.i18n.default_locale}'; I18n.fallbacks = true; I18n.locale = '#{I18n.locale}';"
+      end
+
+    end
+  end
+end
 module Apptemplate
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -24,7 +36,9 @@ module Apptemplate
     config.active_record.raise_in_transactional_callbacks = true
 
     config.assets.paths << Rails.root.join("vendor","assets","bower_components")
+    config.react.server_renderer = I18nJsRenderer#React::ServerRendering::I18nJsRenderer
 
+    puts config.inspect
 
   end
 end
